@@ -61,7 +61,7 @@ const App = (props) => {
                     fontWeight: "500",
                     marginBottom: "10px",
                 }}
-                >Customer Resource Manager</div>
+                >React App</div>
 
                 <div style={{display: "flex", marginLeft: "auto", marginBottom: "0px", alignItems: "center", gap: "30px"}}>
                 </div>

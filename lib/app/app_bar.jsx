@@ -25,7 +25,7 @@ const ResponsiveAppBar = (props) => {
 
     let user = props.user;
 
-    let display_name = user?.display_name || "Remko NoteboomXXX";
+    let display_name = user?.display_name || user?.login;
 
     //const modules = ['Scehdule', 'Materials', 'Reports', 'Manage', 'Timesheet'];
     let modules = [];
@@ -92,7 +92,7 @@ const ResponsiveAppBar = (props) => {
         <Container maxWidth={false}>
           <Toolbar disableGutters variant="dense">
             <div style={{marginLeft: "-30px", marginRight: "50px"}}>
-                <img style={{width: "250px"}} src="/plugins/spt/modules/workflow/apps/Resource/media/tactic_resource_white.png"/>
+                <img style={{marginLeft: "10px", width: "120"}} src="/context/logo/tactic_logo_white.svg"/>
             </div>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
@@ -150,7 +150,7 @@ const ResponsiveAppBar = (props) => {
               }}
             >
               <div>
-                  <img style={{width: "200px"}} src="/plugins/spt/modules/workflow/project_management/media/2020/TACTIC_logo_project_white.svg"/>
+                  <img style={{marginLeft: "10px", width: "120px"}} src="/context/logo/TACTIC_logo_project_white.svg"/>
               </div>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
