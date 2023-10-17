@@ -27,12 +27,10 @@ const ResponsiveAppBar = (props) => {
 
     let display_name = user?.display_name || user?.login;
 
-    //const modules = ['Scehdule', 'Materials', 'Reports', 'Manage', 'Timesheet'];
     let modules = [];
     if (props.modules && props.modules.length > 1) {
         modules = props.modules;
     }
-    //const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
     const settings = [];
 
 
@@ -123,8 +121,8 @@ const ResponsiveAppBar = (props) => {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {modules.map((module) => (
-                  <MenuItem key={module} onClick={ e => {
+                {modules.map((module, index) => (
+                  <MenuItem key={module, index} onClick={ e => {
                       handleCloseNavMenu();
                       set_tab_mode(module);
                   }}>
@@ -150,13 +148,13 @@ const ResponsiveAppBar = (props) => {
               }}
             >
               <div>
-                  <img style={{marginLeft: "10px", width: "120px"}} src="/context/logo/TACTIC_logo_project_white.svg"/>
+                  <img style={{marginLeft: "10px", width: "120px"}} src="/context/logo/tactic_logo_white.svg"/>
               </div>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {modules.map((module) => (
+              {modules.map((module, index) => (
                 <Button
-                  key={module}
+                  key={index}
                   onClick={ e => {
                       set_tab_mode(module);
                       set_current(module);
@@ -204,8 +202,8 @@ const ResponsiveAppBar = (props) => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={ e => {
+                {settings.map((setting, index) => (
+                  <MenuItem key={index} onClick={ e => {
                       handleCloseUserMenu();
                      }}>
                     <Typography textAlign="center">{setting}</Typography>
